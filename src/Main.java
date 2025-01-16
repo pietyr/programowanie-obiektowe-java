@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        lab2(3);
+        lab2(8);
 
     }
 
@@ -28,6 +28,39 @@ public class Main {
                 for(Uczen uczen : uczniowie){
                     System.out.println(uczen.toString());
                 }
+                break;
+            case 6:
+                // Równoboczne
+                System.out.println(Lab2.sprawdzTrojkat(5,5,5));
+                System.out.println(Lab2.sprawdzTrojkat(10,10,10));
+
+                // Równoramienne
+                System.out.println(Lab2.sprawdzTrojkat(7,7,5));
+                System.out.println(Lab2.sprawdzTrojkat(9,5,9));
+
+                // Różnoboczne
+                System.out.println(Lab2.sprawdzTrojkat(6,7,8));
+                System.out.println(Lab2.sprawdzTrojkat(9,10,11));
+
+                // Nie istnieje
+                System.out.println(Lab2.sprawdzTrojkat(1,2,3));
+                System.out.println(Lab2.sprawdzTrojkat(4,10,5));
+                break;
+            case 7:
+                int[] podzielne = Lab2.liczbyPodzielnePrzezX(13, 11,111);
+                System.out.println("Liczby podzielne przez 13 z zakresu <11; 111>:");
+                for(int liczba : podzielne){
+                    System.out.println(liczba);
+                }
+                break;
+            case 8:
+                int[] fibo = Lab2.fibonacci(20);
+                System.out.println("Pierwsze 20 elementów ciągu Fibonacciego:");
+                String ciag = "";
+                for(int liczba : fibo){
+                    ciag += (" " + liczba);
+                }
+                System.out.println(ciag);
         }
     }
 }
